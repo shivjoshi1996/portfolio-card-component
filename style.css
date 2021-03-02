@@ -18,36 +18,11 @@
 body {
     background-color: var(--dark-cyan);
     position: relative;
-}
-
-.background-image-container {
-    max-width: 100vw;
-    max-height: 100vh;
-}
-
-.background-image-top {
-    background-image: url(./images/bg-pattern-top.svg);
-    height: 50%;
-    width: 50%;
-    top: 0;
-    position: absolute;
-    z-index: -1;
-    background-size: cover;
+    min-height: 100vh;
+    background-image: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
     background-repeat: no-repeat;
-    background-position: bottom;
-}
-
-.background-image-bottom {
-    background-image: url(./images/bg-pattern-bottom.svg);
-    height: 50%;
-    width: 50%;
-    right: 0;
-    bottom: 0;
-    position: absolute;
-    z-index: -1;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top left;
+    background-position: right 35vw bottom 50vh, left 35vw top 50vh;
+    min-height: 100vh;
 }
 
 .flex-container {
@@ -70,23 +45,32 @@ body {
     background-image: url(./images/bg-pattern-card.svg);
     border-radius: 10px 10px 0px 0px;
     position: relative;
+    z-index: 1;
 
-}
-
-.profile-picture img {
-    border-radius: 50px;
-    border: 5px solid white;
-    position: absolute;
-    top: 65%;
-    left: 34%;
 }
 
 .profile-info {
-    margin-top: 4.5rem;
     text-align: center;
     display: flex;
     justify-content: center;
     font-size: 1.1rem;
+    flex-direction: column;
+}
+
+.profile-picture {
+    z-index: 3;
+}
+
+.profile-picture img {
+    border-radius: 50px;
+    border: 4px solid white;
+    margin-top: -3em;
+    margin-bottom: 2em;
+}
+
+.profile-personal-info {
+    display: flex;
+    justify-content: center;
 }
 
 .profile-name {
@@ -128,13 +112,11 @@ body {
 }
 
 @media only screen and (min-width: 600px) {
+    body {
+        background-position: right 50vw bottom 40vh, left 50vw top 50vh;
+    }
     .card-container {
         width: 23em;
-        background-color: white;
-        border-radius: 10px 10px 10px 10px;
-    }
-    .profile-picture img {
-        left: 36%;
-    }
+     }
     
   }
