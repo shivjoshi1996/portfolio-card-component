@@ -1,0 +1,149 @@
+:root {
+    --dark-cyan:  hsl(185, 75%, 39%);
+    --very-dark-blue: hsl(229, 23%, 23%);
+    --dark-gray-blue:hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+    font-size: 1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+    /* font-family: 'Josefin Sans', sans-serif; */
+}
+
+body {
+    background-color: var(--dark-cyan);
+    position: relative;
+}
+
+.background-image-container {
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+.background-image-top {
+    background-image: url(./images/bg-pattern-top.svg);
+    height: 50%;
+    width: 50%;
+    top: 0;
+    position: absolute;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.background-image-bottom {
+    background-image: url(./images/bg-pattern-bottom.svg);
+    height: 50%;
+    width: 50%;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+.flex-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container {
+    
+    width: 20em;
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.card-banner {
+    height: 10em;
+    background-image: url(./images/bg-pattern-card.svg);
+    border-radius: 10px 10px 0px 0px;
+    position: relative;
+
+}
+
+.profile-picture img {
+    border-radius: 50px;
+    border: 5px solid white;
+    position: absolute;
+    top: 65%;
+    left: 34%;
+}
+
+.profile-info {
+    margin-top: 4.5rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.profile-name {
+    font-weight: 700;
+    color: var(--very-dark-blue);
+}
+
+.profile-age {
+    color: var(--dark-gray-blue);
+    margin-left: 0.5rem;
+}
+
+.profile-location {
+    text-align: center;
+    color: var(--dark-gray-blue);
+    font-size: 0.8em;
+    margin-top: 1em;
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid lightgray;
+}
+
+.card-metrics {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    height: 6em;
+    align-items: center;
+}
+
+.metric h3 {
+    color: var(--very-dark-blue);
+    margin-bottom: 0.5em;
+}
+
+.metric p {
+    font-size: 0.6em;
+    letter-spacing: 0.2em;
+    color: var(--dark-gray-blue);
+}
+
+@media only screen and (max-width: 600px) {
+    background-image-top {
+        height: 50%;
+        width: 50%;
+        top: -20;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+    
+    .background-image-bottom {
+        height: 50%;
+        width: 50%;
+        right: 0;
+        bottom: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top left;
+    }
+  }
