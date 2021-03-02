@@ -127,23 +127,14 @@ body {
     color: var(--dark-gray-blue);
 }
 
-@media only screen and (max-width: 600px) {
-    .background-image-top {
-        height: 50%;
-        width: 50%;
-        top: -20%;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: right;
+@media only screen and (min-width: 600px) {
+    .card-container {
+        width: 23em;
+        background-color: white;
+        border-radius: 10px 10px 10px 10px;
+    }
+    .profile-picture img {
+        left: 36%;
     }
     
-    .background-image-bottom {
-        height: 50%;
-        width: 50%;
-        right: 0;
-        bottom: 0;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: top left;
-    }
   }
